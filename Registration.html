@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Registration</title>
+  </head>
+  <body>
+    <input type="text" name="name" id="name" />
+    <select id="gender">
+      <option value="">--</option>
+      <option value="male">M</option>
+      <option value="female">F</option>
+    </select>
+    <input type="text" name="email" id="email" />
+    <input type="text" name="mobile" id="mobile" />
+    <hr />
+    <h1 id="dName">NAME</h1>
+    <h2 id="dGender">GENDER</h2>
+    <h3 id="dEmail">EMAIL</h3>
+    <h4 id="dMobile">MOBILE</h4>
+    <hr />
+    <button onclick="showName()">NAME</button>
+    <button onclick="showGender()">GENDER</button>
+    <button onclick="showEmail()">EMAIL</button>
+    <button onclick="showMobile()">MOBILE</button>
+    <button onclick="resetForm()">RESET FORM</button>
+    <button onclick="resetDisplay()">RESET DISPLAY</button>
+    <script type="text/javascript">
+      const headingName = document.getElementById("dName");
+      const headingGender = document.getElementById("dGender");
+      const headingEmail = document.getElementById("dEmail");
+      const headingMobile = document.getElementById("dMobile");
+      function showName() {
+        // Show filled name inside h1
+        headingName.innerText = document.getElementById("name").value;
+      }
+
+      function showGender() {
+        // Show the selected gender inside h2
+        headingGender.innerText = document.getElementById("gender").value;
+      }
+
+      function showEmail() {
+        // Show the filled email inside h3
+        headingEmail.innerText = document.getElementById("email").value;
+      }
+
+      function showMobile() {
+        // Show the filled mobile inside h4
+        headingMobile.innerText = document.getElementById("mobile").value;
+      }
+
+      function resetForm() {
+        // Reset all the form elements to default values (blank "")
+        window.location.reload(true);
+      }
+
+      function resetDisplay() {
+        // Reset all the headings (h1, h2, h3, h4) to blank values
+        headingName.innerText = "";
+        headingGender.innerText = "";
+        headingEmail.innerText = "";
+        headingMobile.innerText = "";
+      }
+    </script>
+  </body>
+</html>
