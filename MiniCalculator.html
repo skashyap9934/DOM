@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Mini Calculator</title>
+    <style>
+      .data {
+        display: flex;
+        margin: auto;
+        flex-direction: column;
+        min-height: 100vh;
+        align-items: center;
+        justify-content: center;
+      }
+
+      #inputs {
+        display: flex;
+        margin-block: 25px;
+      }
+
+      input {
+        margin-inline: 25px;
+        font-size: 21px;
+      }
+
+      #actions {
+        display: flex;
+      }
+
+      button {
+        margin-inline: 15px;
+        padding: 11px;
+        border-radius: 5px;
+        font-size: 21px;
+      }
+
+    </style>
+  </head>
+  <body>
+    <div class="data">
+      <div id="inputs">
+        <input type="text" placeholder="enter 1st Number" />
+        <input type="text" placeholder="enter 2nd Number" />
+      </div>
+      <div id="actions">
+        <button onclick=add() type="button">Add</button>
+        <button onclick=sub() type="button">Subtract</button>
+        <button onclick=mul() type="button">Multiply</button>
+        <button onclick=div() type="button">Divide</button>
+      </div>
+    </div>
+  </body>
+</html>
+
+<script>
+    const numbersInput = document.querySelectorAll('input');
+    const performAction = document.querySelector('button');
+
+    function add() {
+        alert(+numbersInput[0].value + +numbersInput[1].value);
+    }
+    
+    function sub() {
+        alert(+numbersInput[0].value - +numbersInput[1].value);
+    }
+    
+    function mul() {
+        alert(+numbersInput[0].value * +numbersInput[1].value);
+    }
+    
+    function div() {
+        alert(+numbersInput[0].value / +numbersInput[1].value);
+    }
+</script>
